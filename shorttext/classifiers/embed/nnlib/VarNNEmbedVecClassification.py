@@ -58,6 +58,7 @@ class VarNNEmbeddedVecClassifier(CompactIOMachine):
         :rtype: (list, numpy.ndarray, list)
         """
         classlabels = classdict.keys()
+        classlabels.sort()
         lblidx_dict = dict(zip(classlabels, range(len(classlabels))))
 
         # tokenize the words, and determine the word length
